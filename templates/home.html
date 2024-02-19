@@ -1,0 +1,17 @@
+{% extends "base.html" %} 
+
+{% block content %}
+    <div id="home">
+        <div>
+            <h2>Welcome to ResturaBD</h2>
+            <p>
+                In ResturaBD, 
+                you will get every kind of restaurant food you like to eat or drink or whatever you want to do with that food, 
+                that's upto you, we don't give a <i>nope</i>.
+            </p>
+        </div>
+    
+        {% load static %} 
+        <img src="{% static "lamb.png" %}" alt="lamb food" />
+    </div>
+{% endblock content %}     
