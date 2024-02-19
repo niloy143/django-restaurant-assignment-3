@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 
-<!---->
 {% block content %}
-<h2>Meal</h2>
-<p>{% url "meal" %}</p>
+
+<h2 class="p-4">Available Meal List</h2>
+
+<div class="d-flex flex-wrap justify-content-center gap-4 p-4">
+
+    {% for category in categories %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{ category.strCategoryThumb }}" class="card-img-top w-100" alt="meal-image...">
+        <div class="card-body">
+            <h5 class="card-title">{{ category.strCategory }}</h5>
+            <p class="card-text">{{ category.strCategoryDescription | truncatewords:10 }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    
+</div>
+
 {% endblock content %}
